@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321D031F1754B648001AE974 /* MMiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D031E1754B648001AE974 /* MMiTunesViewController.m */; };
+		321D03221754B65F001AE974 /* MMSpotifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03211754B65F001AE974 /* MMSpotifyViewController.m */; };
+		321D03251754B67E001AE974 /* MMVLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03241754B67E001AE974 /* MMVLCViewController.m */; };
+		321D03281754B68D001AE974 /* MMCustomCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03271754B68D001AE974 /* MMCustomCommandViewController.m */; };
+		321D032B1754BD92001AE974 /* MMQuickTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */; };
+		321D032E1754BDA3001AE974 /* MMSafariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D032D1754BDA3001AE974 /* MMSafariViewController.m */; };
+		321D03301754C1F0001AE974 /* playpause.png in Resources */ = {isa = PBXBuildFile; fileRef = 321D032F1754C1F0001AE974 /* playpause.png */; };
 		3264D02E17531125003DD4BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D02D17531125003DD4BF /* UIKit.framework */; };
 		3264D03017531125003DD4BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D02F17531125003DD4BF /* Foundation.framework */; };
 		3264D03217531125003DD4BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D03117531125003DD4BF /* CoreGraphics.framework */; };
@@ -27,6 +34,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321D031D1754B648001AE974 /* MMiTunesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMiTunesViewController.h; sourceTree = "<group>"; };
+		321D031E1754B648001AE974 /* MMiTunesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMiTunesViewController.m; sourceTree = "<group>"; };
+		321D03201754B65F001AE974 /* MMSpotifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSpotifyViewController.h; sourceTree = "<group>"; };
+		321D03211754B65F001AE974 /* MMSpotifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSpotifyViewController.m; sourceTree = "<group>"; };
+		321D03231754B67E001AE974 /* MMVLCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMVLCViewController.h; sourceTree = "<group>"; };
+		321D03241754B67E001AE974 /* MMVLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVLCViewController.m; sourceTree = "<group>"; };
+		321D03261754B68D001AE974 /* MMCustomCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCustomCommandViewController.h; sourceTree = "<group>"; };
+		321D03271754B68D001AE974 /* MMCustomCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCustomCommandViewController.m; sourceTree = "<group>"; };
+		321D03291754BD92001AE974 /* MMQuickTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuickTimeViewController.h; sourceTree = "<group>"; };
+		321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuickTimeViewController.m; sourceTree = "<group>"; };
+		321D032C1754BDA3001AE974 /* MMSafariViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSafariViewController.h; sourceTree = "<group>"; };
+		321D032D1754BDA3001AE974 /* MMSafariViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSafariViewController.m; sourceTree = "<group>"; };
+		321D032F1754C1F0001AE974 /* playpause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playpause.png; sourceTree = "<group>"; };
 		3264D02A17531125003DD4BF /* MoteMote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoteMote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3264D02D17531125003DD4BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3264D02F17531125003DD4BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321D03311754C1FB001AE974 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				321D032F1754C1F0001AE974 /* playpause.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		3264D02117531124003DD4BF = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +136,7 @@
 				3264D03D17531125003DD4BF /* MMAppDelegate.m */,
 				3264D04517531125003DD4BF /* MainStoryboard_iPhone.storyboard */,
 				3264D04817531125003DD4BF /* MainStoryboard_iPad.storyboard */,
+				321D03311754C1FB001AE974 /* Assets */,
 				3264D0661753214B003DD4BF /* TCP */,
 				3264D06217532132003DD4BF /* Controllers */,
 				3264D03417531125003DD4BF /* Supporting Files */,
@@ -136,6 +165,18 @@
 				3264D04C17531125003DD4BF /* MMServersViewController.m */,
 				32A63A3F17542B5D00FCAA75 /* MMRemoteViewController.h */,
 				32A63A4017542B5D00FCAA75 /* MMRemoteViewController.m */,
+				321D031D1754B648001AE974 /* MMiTunesViewController.h */,
+				321D031E1754B648001AE974 /* MMiTunesViewController.m */,
+				321D03201754B65F001AE974 /* MMSpotifyViewController.h */,
+				321D03211754B65F001AE974 /* MMSpotifyViewController.m */,
+				321D03231754B67E001AE974 /* MMVLCViewController.h */,
+				321D03241754B67E001AE974 /* MMVLCViewController.m */,
+				321D03291754BD92001AE974 /* MMQuickTimeViewController.h */,
+				321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */,
+				321D032C1754BDA3001AE974 /* MMSafariViewController.h */,
+				321D032D1754BDA3001AE974 /* MMSafariViewController.m */,
+				321D03261754B68D001AE974 /* MMCustomCommandViewController.h */,
+				321D03271754B68D001AE974 /* MMCustomCommandViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +248,7 @@
 				3264D04417531125003DD4BF /* Default-568h@2x.png in Resources */,
 				3264D04717531125003DD4BF /* MainStoryboard_iPhone.storyboard in Resources */,
 				3264D04A17531125003DD4BF /* MainStoryboard_iPad.storyboard in Resources */,
+				321D03301754C1F0001AE974 /* playpause.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +265,12 @@
 				3264D05517531147003DD4BF /* MMModel.m in Sources */,
 				3264D06517532147003DD4BF /* GCDAsyncSocket.m in Sources */,
 				32A63A4117542B5D00FCAA75 /* MMRemoteViewController.m in Sources */,
+				321D031F1754B648001AE974 /* MMiTunesViewController.m in Sources */,
+				321D03221754B65F001AE974 /* MMSpotifyViewController.m in Sources */,
+				321D03251754B67E001AE974 /* MMVLCViewController.m in Sources */,
+				321D03281754B68D001AE974 /* MMCustomCommandViewController.m in Sources */,
+				321D032B1754BD92001AE974 /* MMQuickTimeViewController.m in Sources */,
+				321D032E1754BDA3001AE974 /* MMSafariViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

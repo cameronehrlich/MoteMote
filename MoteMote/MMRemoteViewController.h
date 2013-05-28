@@ -9,20 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "MMModel.h"
 
+#define ITUNES 0
+#define QUICKTIME 1
+#define SAFARI 2
+#define VLC 3
+#define SPOTIFY 4
+#define CUSTOM 5
+
+
 @interface MMRemoteViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *application;
-@property (weak, nonatomic) IBOutlet UITextField *command;
 
-
-@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
-- (IBAction)runCustomCommand:(id)sender;
-
-- (IBAction)applicationChooser:(id)sender;
 - (IBAction)servers:(id)sender;
-- (IBAction)play:(id)sender;
-- (IBAction)pause:(id)sender;
-- (IBAction)next:(id)sender;
-- (IBAction)previous:(id)sender;
-- (IBAction)volume:(id)sender;
+- (IBAction)buttonPressed:(id)sender;
 
 @end
