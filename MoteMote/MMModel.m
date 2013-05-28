@@ -7,7 +7,6 @@
 //
 
 #import "MMModel.h"
-#define DATA_LENGTH 30
 
 static NSString *serviceType = @"_motemote._tcp.";
 static NSString *serviceDomain = @"local.";
@@ -35,16 +34,24 @@ static NSString *serviceDomain = @"local.";
     return self;
 }
 
-- (void) sendCommand: (NSString *) string {
-    int add = DATA_LENGTH - [string length];
-    if (add > 0) {
-        NSString *padded = [[NSString string] stringByPaddingToLength:add withString:@" " startingAtIndex:0];
-        string = [NSString stringWithFormat:@"%@%@", string, padded];
-    }
+- (void) sendCommand: (NSDictionary *) dict {
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    if (error) {NSLog(@"JSON ERROR: %@", error);}
     
-	NSData *welcomeData = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *commandString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    [[[MMModel sharedModel] asyncSocket] writeData:welcomeData withTimeout:10 tag:0];
+    NSLog(@"Sending: %@", commandString);
+
+    NSString *pad = [[NSString string] stringByPaddingToLength:(DATA_LENGTH - [commandString length])
+                                                       withString:@" "
+                                                  startingAtIndex:0];
+    
+    NSString *paddedCommandString = [NSString stringWithFormat:@"%@%@", commandString, pad];
+    
+	NSData *finalData = [paddedCommandString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [[[MMModel sharedModel] asyncSocket] writeData:finalData withTimeout:10 tag:0];
 }
 
 - (void) connectToNetService:(NSNetService *)netService {
@@ -59,6 +66,11 @@ static NSString *serviceDomain = @"local.";
             NSLog(@"Unable to connect: %@", err);
         }
 	}
+}
+
+- (NSString *) humanizedNameForService:(NSNetService *)service {
+    NSString *connectedToText = [[service hostName] stringByReplacingOccurrencesOfString:@".local." withString:@""];
+    return connectedToText;
 }
 
 - (void) reloadBonjour {
@@ -127,6 +139,7 @@ static NSString *serviceDomain = @"local.";
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
 	NSLog(@"SocketDidDisconnect:WithError: %@", err);
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil];
+    [self connectToNetService:serverService];
 }
 
 

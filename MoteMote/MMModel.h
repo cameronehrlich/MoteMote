@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GCDAsyncSocket.h"
+#define DATA_LENGTH 200
 
 @interface MMModel : NSObject <NSNetServiceBrowserDelegate, NSNetServiceDelegate>
 
@@ -18,8 +19,10 @@
 
 + (id) sharedModel;
 
-- (void) sendCommand: (NSString *) string;
+- (void) sendCommand: (NSDictionary *) dict;
 - (void) reloadBonjour;
 - (void) connectToNetService:(NSNetService *)netService;
+- (NSString *) humanizedNameForService:(NSNetService *)service;
+
 
 @end

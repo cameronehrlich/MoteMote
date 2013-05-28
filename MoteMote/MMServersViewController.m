@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Cameron Ehrlich. All rights reserved.
 //
 
-#import "MMViewController.h"
+#import "MMServersViewController.h"
 
-@implementation MMViewController
+@implementation MMServersViewController
 
 @synthesize servicesTableView;
 
@@ -17,37 +17,23 @@
     [super viewDidLoad];
     [MMModel sharedModel];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receiveTestNotification:)
+                                             selector:@selector(receiveNotification:)
                                                  name:@"reloadTable"
                                                object:nil];
 }
 
-- (void) receiveTestNotification:(NSNotification *) notification
+- (void) receiveNotification:(NSNotification *) notification
 {
     if ([[notification name] isEqualToString:@"reloadTable"])
         [servicesTableView reloadData];
 }
 
 
-- (IBAction)reloadTable:(id)sender {
-    [servicesTableView reloadData];
-}
-
-- (IBAction)play:(UIButton *)sender {
-    [[MMModel sharedModel] sendCommand:sender.titleLabel.text];
-}
-- (IBAction)pause:(UIButton *)sender {
-    [[MMModel sharedModel] sendCommand:sender.titleLabel.text];
-}
-- (IBAction)next:(UIButton *)sender {
-    [[MMModel sharedModel] sendCommand:sender.titleLabel.text];
-}
-- (IBAction)previous:(UIButton *)sender {
-    [[MMModel sharedModel] sendCommand:sender.titleLabel.text];
-}
 
 - (IBAction)reload:(id)sender {
     [[MMModel sharedModel] reloadBonjour];
+    [servicesTableView reloadData];
+
 }
 
 
@@ -55,10 +41,8 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    NSString *serviceName = [(NSNetService *)[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row] hostName];
-    
-    cell.textLabel.text = serviceName;
+        
+    [cell.textLabel setText:[[MMModel sharedModel] humanizedNameForService:(NSNetService *)[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]]];
     
     return cell;
 }
@@ -66,6 +50,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%@", [[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row] description]);
     [[MMModel sharedModel] connectToNetService:[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"remote" sender:self];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -74,6 +59,13 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"remote"]) {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
