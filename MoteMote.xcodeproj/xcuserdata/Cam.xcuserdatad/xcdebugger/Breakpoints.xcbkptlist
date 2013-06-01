@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MoteMote/MMModel.h"
-         timestampString = "391681094.34288"
+         timestampString = "391761994.595746"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
-         landmarkName = "-reloadBonjour"
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "+sharedModel"
          landmarkType = "4">
       </FileBreakpoint>
    </FileBreakpoints>

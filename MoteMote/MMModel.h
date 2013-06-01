@@ -7,22 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCDAsyncSocket.h"
+#import "MMClient.h"
 
-#define DATA_LENGTH 200
+@interface MMModel : NSObject
 
-@interface MMModel : NSObject <NSNetServiceBrowserDelegate, NSNetServiceDelegate>
-
-@property (nonatomic, strong) NSNetServiceBrowser *netServiceBrowser;
-@property (nonatomic, strong) NSNetService *serverService;
-@property (nonatomic, strong) NSMutableArray *offeredServices;
-@property (nonatomic, strong) GCDAsyncSocket *asyncSocket;
+@property (nonatomic, retain) MMClient *client;
 
 + (id) sharedModel;
 
-- (void) sendCommand: (NSDictionary *) dict;
-- (void) reloadBonjour;
-- (void) connectToNetService:(NSNetService *)netService;
+-(void) sendCommand:(NSDictionary *) dict;
+
 - (NSString *) humanizedNameForService:(NSNetService *)service;
 
 

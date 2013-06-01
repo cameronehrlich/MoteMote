@@ -31,7 +31,7 @@
 
 
 - (IBAction)reload:(id)sender {
-    [[MMModel sharedModel] reloadBonjour];
+//    [[MMModel sharedModel] reloadBonjour];
     [servicesTableView reloadData];
 
 }
@@ -42,19 +42,20 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
         
-    [cell.textLabel setText:[[MMModel sharedModel] humanizedNameForService:(NSNetService *)[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]]];
+//    [cell.textLabel setText:[[MMModel sharedModel] humanizedNameForService:(NSNetService *)[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]]];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@", [[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row] description]);
-    [[MMModel sharedModel] connectToNetService:[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]];
+//    NSLog(@"%@", [[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row] description]);
+//    [[MMModel sharedModel] connectToNetService:[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"remote" sender:self];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[[MMModel sharedModel] offeredServices] count];
+//    return [[[MMModel sharedModel] offeredServices] count];]
+    return 0;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
