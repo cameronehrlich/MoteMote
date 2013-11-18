@@ -30,14 +30,16 @@
 }
 
 -(void) sendCommand:(NSDictionary *) dict{
+    [client sendObject:dict];
     
 }
 
--(NSString *) humanizedNameForService:(NSNetService *)service {
-    NSString *connectedToText = [[service hostName] stringByReplacingOccurrencesOfString:@".local." withString:@""];
-    return connectedToText;
++ (NSString *) humanizedNameForService:(NSNetService *)service {
+    return [[service hostName] stringByReplacingOccurrencesOfString:@".local." withString:@""];
 }
 
-
+-(void) refreshServices{
+    [client searchForServers];
+}
 
 @end

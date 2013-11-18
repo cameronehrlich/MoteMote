@@ -13,7 +13,6 @@
 
 @interface MMMouseViewController : UIViewController
 
-@property (nonatomic, strong) MMClient *thisClient;
-
 @property (nonatomic, strong) MMMouse *mouse;
+
 @end

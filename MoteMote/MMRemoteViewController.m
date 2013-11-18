@@ -18,6 +18,11 @@
     [self performSegueWithIdentifier:sender.titleLabel.text sender:self];
 }
 
+- (IBAction)singleTap:(id)sender {
+    NSString *command = @"tell application \"System Events\" to key code 49";
+    [[MMModel sharedModel] sendCommand:@{@"type":@"applescript", @"script": command}];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
 }

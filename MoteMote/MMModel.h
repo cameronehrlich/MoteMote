@@ -14,10 +14,10 @@
 @property (nonatomic, retain) MMClient *client;
 
 + (id) sharedModel;
++ (NSString *) humanizedNameForService:(NSNetService *)service;
+- (void) sendCommand:(NSDictionary *) dict;
+-(void) refreshServices;
 
--(void) sendCommand:(NSDictionary *) dict;
-
-- (NSString *) humanizedNameForService:(NSNetService *)service;
 
 
 @end

@@ -21,5 +21,6 @@
 
 - (IBAction)servers:(id)sender;
 - (IBAction)buttonPressed:(id)sender;
+- (IBAction)singleTap:(id)sender;
 
 @end

@@ -8,32 +8,34 @@
 
 #import "MMServersViewController.h"
 
-@implementation MMServersViewController
+@implementation MMServersViewController {
+    MMClient *theClient;
+}
+
 
 @synthesize servicesTableView;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [MMModel sharedModel];
+    theClient = (MMClient *)[[MMModel sharedModel] client];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
                                                  name:@"reloadTable"
                                                object:nil];
 }
 
-- (void) receiveNotification:(NSNotification *) notification
-{
-    if ([[notification name] isEqualToString:@"reloadTable"])
+- (void) receiveNotification:(NSNotification *) notification {
+    if ([[notification name] isEqualToString:@"reloadTable"]){
         [servicesTableView reloadData];
+    }
 }
 
 
 
 - (IBAction)reload:(id)sender {
-//    [[MMModel sharedModel] reloadBonjour];
+    [[MMModel sharedModel] refreshServices];
     [servicesTableView reloadData];
-
 }
 
 
@@ -42,20 +44,18 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
         
-//    [cell.textLabel setText:[[MMModel sharedModel] humanizedNameForService:(NSNetService *)[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]]];
+    [cell.textLabel setText:[MMModel humanizedNameForService:[[theClient services] objectAtIndex:indexPath.row]]];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%@", [[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row] description]);
-//    [[MMModel sharedModel] connectToNetService:[[[MMModel sharedModel] offeredServices] objectAtIndex:indexPath.row]];
+    [theClient connectTo:[[theClient services] objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"remote" sender:self];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return [[[MMModel sharedModel] offeredServices] count];]
-    return 0;
+    return [theClient services].count;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

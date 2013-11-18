@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		321D031F1754B648001AE974 /* MMiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D031E1754B648001AE974 /* MMiTunesViewController.m */; };
-		321D03221754B65F001AE974 /* MMSpotifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03211754B65F001AE974 /* MMSpotifyViewController.m */; };
-		321D03251754B67E001AE974 /* MMVLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03241754B67E001AE974 /* MMVLCViewController.m */; };
-		321D03281754B68D001AE974 /* MMCustomCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D03271754B68D001AE974 /* MMCustomCommandViewController.m */; };
-		321D032B1754BD92001AE974 /* MMQuickTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */; };
-		321D032E1754BDA3001AE974 /* MMSafariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321D032D1754BDA3001AE974 /* MMSafariViewController.m */; };
 		321D03301754C1F0001AE974 /* playpause.png in Resources */ = {isa = PBXBuildFile; fileRef = 321D032F1754C1F0001AE974 /* playpause.png */; };
 		3264D02E17531125003DD4BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D02D17531125003DD4BF /* UIKit.framework */; };
 		3264D03017531125003DD4BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D02F17531125003DD4BF /* Foundation.framework */; };
@@ -27,30 +21,17 @@
 		3264D04A17531125003DD4BF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3264D04817531125003DD4BF /* MainStoryboard_iPad.storyboard */; };
 		3264D04D17531125003DD4BF /* MMServersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264D04C17531125003DD4BF /* MMServersViewController.m */; };
 		3264D05517531147003DD4BF /* MMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264D05417531147003DD4BF /* MMModel.m */; };
-		3264D06517532147003DD4BF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264D06417532147003DD4BF /* GCDAsyncSocket.m */; };
 		3264D0681753216B003DD4BF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D0671753216B003DD4BF /* Security.framework */; };
 		3264D06A175321C6003DD4BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264D069175321C6003DD4BF /* CFNetwork.framework */; };
+		328D9289175EA37200A77AB0 /* MMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D9288175EA37200A77AB0 /* MMClient.m */; };
 		32A63A4117542B5D00FCAA75 /* MMRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63A4017542B5D00FCAA75 /* MMRemoteViewController.m */; };
 		32B4E1EE1759CA00008E72B6 /* MMMouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E1ED1759CA00008E72B6 /* MMMouse.m */; };
 		32B4E1F01759CA0B008E72B6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4E1EF1759CA0B008E72B6 /* CoreMotion.framework */; };
-		32B4E1F31759CA5F008E72B6 /* MMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E1F21759CA5F008E72B6 /* MMClient.m */; };
 		32B4E1F71759CBAB008E72B6 /* MMMouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4E1F61759CBAB008E72B6 /* MMMouseViewController.m */; };
 		D60CD02AF0FB45918D619519 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E5822A35A341FDB44557F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		321D031D1754B648001AE974 /* MMiTunesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMiTunesViewController.h; sourceTree = "<group>"; };
-		321D031E1754B648001AE974 /* MMiTunesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMiTunesViewController.m; sourceTree = "<group>"; };
-		321D03201754B65F001AE974 /* MMSpotifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSpotifyViewController.h; sourceTree = "<group>"; };
-		321D03211754B65F001AE974 /* MMSpotifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSpotifyViewController.m; sourceTree = "<group>"; };
-		321D03231754B67E001AE974 /* MMVLCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMVLCViewController.h; sourceTree = "<group>"; };
-		321D03241754B67E001AE974 /* MMVLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVLCViewController.m; sourceTree = "<group>"; };
-		321D03261754B68D001AE974 /* MMCustomCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCustomCommandViewController.h; sourceTree = "<group>"; };
-		321D03271754B68D001AE974 /* MMCustomCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCustomCommandViewController.m; sourceTree = "<group>"; };
-		321D03291754BD92001AE974 /* MMQuickTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuickTimeViewController.h; sourceTree = "<group>"; };
-		321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuickTimeViewController.m; sourceTree = "<group>"; };
-		321D032C1754BDA3001AE974 /* MMSafariViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSafariViewController.h; sourceTree = "<group>"; };
-		321D032D1754BDA3001AE974 /* MMSafariViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSafariViewController.m; sourceTree = "<group>"; };
 		321D032F1754C1F0001AE974 /* playpause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playpause.png; sourceTree = "<group>"; };
 		3264D02A17531125003DD4BF /* MoteMote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoteMote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3264D02D17531125003DD4BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -71,17 +52,15 @@
 		3264D04C17531125003DD4BF /* MMServersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMServersViewController.m; sourceTree = "<group>"; };
 		3264D05317531147003DD4BF /* MMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMModel.h; sourceTree = "<group>"; };
 		3264D05417531147003DD4BF /* MMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMModel.m; sourceTree = "<group>"; };
-		3264D06317532147003DD4BF /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		3264D06417532147003DD4BF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		3264D0671753216B003DD4BF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3264D069175321C6003DD4BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		328D9287175EA37200A77AB0 /* MMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMClient.h; sourceTree = "<group>"; };
+		328D9288175EA37200A77AB0 /* MMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMClient.m; sourceTree = "<group>"; };
 		32A63A3F17542B5D00FCAA75 /* MMRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRemoteViewController.h; sourceTree = "<group>"; };
 		32A63A4017542B5D00FCAA75 /* MMRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMRemoteViewController.m; sourceTree = "<group>"; };
 		32B4E1EC1759CA00008E72B6 /* MMMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMouse.h; sourceTree = "<group>"; };
 		32B4E1ED1759CA00008E72B6 /* MMMouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMouse.m; sourceTree = "<group>"; };
 		32B4E1EF1759CA0B008E72B6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		32B4E1F11759CA5F008E72B6 /* MMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMClient.h; path = ../../../../Desktop/NetworkingProjects/NetworkingTest/NetworkingTest/MMClient.h; sourceTree = "<group>"; };
-		32B4E1F21759CA5F008E72B6 /* MMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMClient.m; path = ../../../../Desktop/NetworkingProjects/NetworkingTest/NetworkingTest/MMClient.m; sourceTree = "<group>"; };
 		32B4E1F51759CBAB008E72B6 /* MMMouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMouseViewController.h; sourceTree = "<group>"; };
 		32B4E1F61759CBAB008E72B6 /* MMMouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMouseViewController.m; sourceTree = "<group>"; };
 		667F7220A2D9408CA7B13D98 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -149,14 +128,13 @@
 		3264D03317531125003DD4BF /* MoteMote */ = {
 			isa = PBXGroup;
 			children = (
-				32B4E1F41759CA6F008E72B6 /* Classes */,
 				3264D03C17531125003DD4BF /* MMAppDelegate.h */,
 				3264D03D17531125003DD4BF /* MMAppDelegate.m */,
 				3264D04517531125003DD4BF /* MainStoryboard_iPhone.storyboard */,
 				3264D04817531125003DD4BF /* MainStoryboard_iPad.storyboard */,
-				321D03311754C1FB001AE974 /* Assets */,
-				3264D0661753214B003DD4BF /* TCP */,
+				32B4E1F41759CA6F008E72B6 /* Classes */,
 				3264D06217532132003DD4BF /* Controllers */,
+				321D03311754C1FB001AE974 /* Assets */,
 				3264D03417531125003DD4BF /* Supporting Files */,
 			);
 			path = MoteMote;
@@ -185,29 +163,8 @@
 				3264D04C17531125003DD4BF /* MMServersViewController.m */,
 				32A63A3F17542B5D00FCAA75 /* MMRemoteViewController.h */,
 				32A63A4017542B5D00FCAA75 /* MMRemoteViewController.m */,
-				321D031D1754B648001AE974 /* MMiTunesViewController.h */,
-				321D031E1754B648001AE974 /* MMiTunesViewController.m */,
-				321D03201754B65F001AE974 /* MMSpotifyViewController.h */,
-				321D03211754B65F001AE974 /* MMSpotifyViewController.m */,
-				321D03231754B67E001AE974 /* MMVLCViewController.h */,
-				321D03241754B67E001AE974 /* MMVLCViewController.m */,
-				321D03291754BD92001AE974 /* MMQuickTimeViewController.h */,
-				321D032A1754BD92001AE974 /* MMQuickTimeViewController.m */,
-				321D032C1754BDA3001AE974 /* MMSafariViewController.h */,
-				321D032D1754BDA3001AE974 /* MMSafariViewController.m */,
-				321D03261754B68D001AE974 /* MMCustomCommandViewController.h */,
-				321D03271754B68D001AE974 /* MMCustomCommandViewController.m */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		3264D0661753214B003DD4BF /* TCP */ = {
-			isa = PBXGroup;
-			children = (
-				3264D06317532147003DD4BF /* GCDAsyncSocket.h */,
-				3264D06417532147003DD4BF /* GCDAsyncSocket.m */,
-			);
-			name = TCP;
 			sourceTree = "<group>";
 		};
 		32B4E1F41759CA6F008E72B6 /* Classes */ = {
@@ -217,8 +174,8 @@
 				3264D05417531147003DD4BF /* MMModel.m */,
 				32B4E1EC1759CA00008E72B6 /* MMMouse.h */,
 				32B4E1ED1759CA00008E72B6 /* MMMouse.m */,
-				32B4E1F11759CA5F008E72B6 /* MMClient.h */,
-				32B4E1F21759CA5F008E72B6 /* MMClient.m */,
+				328D9287175EA37200A77AB0 /* MMClient.h */,
+				328D9288175EA37200A77AB0 /* MMClient.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -329,17 +286,10 @@
 				3264D03E17531125003DD4BF /* MMAppDelegate.m in Sources */,
 				3264D04D17531125003DD4BF /* MMServersViewController.m in Sources */,
 				3264D05517531147003DD4BF /* MMModel.m in Sources */,
-				3264D06517532147003DD4BF /* GCDAsyncSocket.m in Sources */,
 				32A63A4117542B5D00FCAA75 /* MMRemoteViewController.m in Sources */,
-				321D031F1754B648001AE974 /* MMiTunesViewController.m in Sources */,
-				321D03221754B65F001AE974 /* MMSpotifyViewController.m in Sources */,
-				321D03251754B67E001AE974 /* MMVLCViewController.m in Sources */,
-				321D03281754B68D001AE974 /* MMCustomCommandViewController.m in Sources */,
-				321D032B1754BD92001AE974 /* MMQuickTimeViewController.m in Sources */,
-				321D032E1754BDA3001AE974 /* MMSafariViewController.m in Sources */,
 				32B4E1EE1759CA00008E72B6 /* MMMouse.m in Sources */,
-				32B4E1F31759CA5F008E72B6 /* MMClient.m in Sources */,
 				32B4E1F71759CBAB008E72B6 /* MMMouseViewController.m in Sources */,
+				328D9289175EA37200A77AB0 /* MMClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

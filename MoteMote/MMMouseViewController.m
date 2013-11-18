@@ -8,44 +8,40 @@
 
 #import "MMMouseViewController.h"
 
-@implementation MMMouseViewController
+@implementation MMMouseViewController{
+    NSTimer *timer;
+    MMClient *thisClient;
+}
 
-@synthesize thisClient;
 @synthesize mouse;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    thisClient = [[MMModel sharedModel] client];
+    thisClient = (MMClient *)[[MMModel sharedModel] client];
     mouse = [[MMMouse alloc] init];
-	// Do any additional setup after loading the view.
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateMouse) userInfo:nil repeats:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) updateMouse {
     NSString *x = [NSString stringWithFormat:@"%f", ([mouse xAxis] * 1440)];
     NSString *y = [NSString stringWithFormat:@"%f", ([mouse yAxis] * 1000)];
-    [thisClient sendObject:@{@"x": x, @"y":y}];
+    [thisClient sendObject:@{@"type": @"mouseMove", @"x": x, @"y":y}];
+}
+- (IBAction)rightClick:(id)sender {
+    [thisClient sendObject:@{@"type":@"mouseClick", @"button": @"right"}];
 }
 
-- (IBAction)send:(id)sender {
-    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateMouse) userInfo:nil repeats:YES];
+- (IBAction)click:(UITapGestureRecognizer *)sender {
+    [thisClient sendObject:@{@"type":@"mouseClick", @"button": @"left"}];
 }
 
-- (IBAction)openConnection:(id)sender {
-    if ([[thisClient services] count] >= 1) {
-        bool connected = [thisClient connectTo:[[thisClient services] objectAtIndex:0]]; //[[client services] objectAtIndexPath:indexPath.row]
-        if (connected) {
-            NSLog(@"Opened connection successfully");
-            return;
-        }
-    }
-    NSLog(@"Unable to open a connection =(");
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [timer invalidate];
 }
 
 - (IBAction)calibrate:(id)sender {

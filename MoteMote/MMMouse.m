@@ -29,8 +29,6 @@ double _axisYCorrection = 0;
     return self;
 }
 
-
-
 -(void) setUpMotionManager{
     motionManager = [[CMMotionManager alloc] init];
     motionManager.accelerometerUpdateInterval = 0.03;
@@ -40,7 +38,6 @@ double _axisYCorrection = 0;
         }
         [self handleMotionData:motion];
     }];
-    
 }
 
 - (void) calibrate {
